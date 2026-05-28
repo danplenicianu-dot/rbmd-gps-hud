@@ -4,112 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
-    <title>RBMD GPS HUD</title>
+    <title>RBMD Speed</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="app" aria-label="Ray-Ban Meta Display GPS HUD">
-      <section class="screen active" id="screen-hud" aria-label="Navigation HUD">
-        <header class="topbar">
-          <div>
-            <span class="label">GPS</span>
-            <strong id="gpsState">Starting</strong>
-          </div>
-          <div class="signal" aria-hidden="true">
-            <span></span><span></span><span></span>
-          </div>
-        </header>
-
-        <div class="compass" aria-label="Compass">
-          <span id="headingLabel">N</span>
-          <div class="compass-ring">
-            <div class="needle" id="bearingNeedle"></div>
-            <div class="turn-arrow" id="turnArrow">↑</div>
-          </div>
-        </div>
-
-        <section class="next-card" aria-live="polite">
-          <p class="label">Next cue</p>
-          <h1 id="cueText">Choose destination</h1>
-          <div class="metrics">
-            <div>
-              <span id="distanceValue">--</span>
-              <small id="distanceUnit">m</small>
-              <p>distance</p>
-            </div>
-            <div>
-              <span id="speedValue">0</span>
-              <small id="speedUnit">km/h</small>
-              <p>speed</p>
-            </div>
-            <div>
-              <span id="etaValue">--</span>
-              <small>min</small>
-              <p>ETA</p>
-            </div>
-          </div>
-        </section>
-
-        <nav class="dock" aria-label="Primary actions">
-          <button class="focusable" data-action="cycle-destination">Dest</button>
-          <button class="focusable" data-screen="route">Route</button>
-          <button class="focusable" data-action="toggle-demo">Demo</button>
-        </nav>
-      </section>
-
-      <section class="screen" id="screen-route" aria-label="Route overview">
-        <header class="topbar">
-          <button class="icon focusable" data-screen="hud" aria-label="Back to HUD">←</button>
-          <div>
-            <span class="label">Route</span>
-            <strong id="routeName">No destination</strong>
-          </div>
-          <button class="icon focusable" data-screen="settings" aria-label="Settings">⚙</button>
-        </header>
-
-        <div class="route-map" aria-hidden="true">
-          <div class="route-line"></div>
-          <div class="route-point origin"></div>
-          <div class="route-point target"></div>
-          <div class="pulse-dot"></div>
-        </div>
-
-        <ol class="waypoints" id="waypoints"></ol>
-
-        <div class="destination-grid" id="destinationGrid" aria-label="Destination presets"></div>
-      </section>
-
-      <section class="screen" id="screen-settings" aria-label="Settings">
-        <header class="topbar">
-          <button class="icon focusable" data-screen="route" aria-label="Back to route">←</button>
-          <div>
-            <span class="label">Display</span>
-            <strong>Settings</strong>
-          </div>
-        </header>
-
-        <div class="settings-list">
-          <button class="focusable setting-row" data-action="toggle-units">
-            <span>Units</span>
-            <strong id="unitsLabel">Metric</strong>
-          </button>
-          <button class="focusable setting-row" data-action="toggle-brightness">
-            <span>HUD glow</span>
-            <strong id="brightnessLabel">Balanced</strong>
-          </button>
-          <button class="focusable setting-row" data-action="use-current-target">
-            <span>Pin here</span>
-            <strong>Set target</strong>
-          </button>
-          <button class="focusable setting-row danger" data-action="reset-demo">
-            <span>Demo path</span>
-            <strong>Reset</strong>
-          </button>
-        </div>
-
-        <p class="note">
-          Uses browser GPS on HTTPS. Arrow keys simulate the MRBD D-pad.
-        </p>
+    <main class="speed-hud" aria-label="Current speed">
+      <section class="speed-readout" aria-live="polite">
+        <div class="speed-value" id="speedValue">--</div>
+        <div class="speed-unit">km/h</div>
       </section>
     </main>
 
