@@ -1,8 +1,8 @@
 {
-  "name": "rbmd-gps-hud",
+  "name": "rbmd-speed",
   "version": "1.0.0",
   "private": true,
-  "description": "GPS HUD web app prototype for Meta Ray-Ban Display glasses.",
+  "description": "Minimal current-speed web app for Meta Ray-Ban Display glasses.",
   "scripts": {
     "start": "npx serve .",
     "check": "node --check app.js"
