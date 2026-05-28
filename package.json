@@ -1,0 +1,17 @@
+{
+  "name": "rbmd-gps-hud",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GPS HUD web app prototype for Meta Ray-Ban Display glasses.",
+  "scripts": {
+    "start": "npx serve .",
+    "check": "node --check app.js"
+  },
+  "keywords": [
+    "meta-ray-ban-display",
+    "gps",
+    "hud",
+    "wearables"
+  ],
+  "license": "MIT"
+}
